@@ -1,0 +1,74 @@
+body{font-size:10pt; background-color:#FFF; color:#333 }
+
+A:link,A:active,A:visited,A:hover{TEXT-DECORATION:none ;Color:#373e55}
+.tb1{border-left: thin solid #06F; border-right:  thin solid #06F; border-bottom: thin solid #06F; border-top: thin solid #06F}
+.tb3{border-right:none; border-top:none; border-bottom:none} 
+.tb4{border-bottom:dotted  thin #06F}
+.maillist {
+	border-right: #63bae7 1px solid; 
+	border-top: #63bae7 1px solid; 
+	border-bottom: #63bae7 1px solid; 
+	border-left: #63bae7 1px solid; 
+	z-index: 1900; 
+	background: #fff; 
+	width: 150px;
+	position:absolute;
+	text-align: left
+}
+.maillist .closeit {
+	margin-top: -5px; 
+	display: block; 
+	font-weight: bold; 
+	margin-bottom: -10px; 
+	color: #333; 
+	line-height: 25px; 
+	text-align: right
+}
+.maillist .closeit a {
+	font-weight:100; 
+	font-size: 10pt; 
+	color: #ccc; 
+	text-decoration: none
+}
+
+.maillist ul {
+	padding-right: 10pt; 
+	padding-left: 10pt; 
+	padding-bottom: 10pt; 
+	margin: 0px; 
+	padding-top: 10pt; 
+	list-style-type: none
+}
+.maillist li {
+	font-size: 10pt; 
+	color: #666; 
+	line-height: 12pt;
+}
+.maillist li a {
+	font-size: 10pt; 
+	color: #0759ad; 
+	text-decoration: none
+}
+.maillist li a:visited {
+	font-size: 10pt; 
+	color: #0759ad; 
+	text-decoration: none
+}
+.maillist li a:hover {
+	font-size: 10pt; 
+	color: red; 
+	text-decoration: underline
+}
+}
+.table_2 {
+	border: 1px solid #33CCFF;
+}
+
+.tab_huibian {
+	border: 1px dashed #CCCCCC;
+}
+
+.table_huishixian {
+	border: 1px solid #CCCCCC;
+}
+

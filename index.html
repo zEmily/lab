@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>兰州大学校园导航</title>
+    <link href="/css/css.css" rel="stylesheet" type="text/css">
+
+    <script>
+        window.onload=function()
+        {
+            var oNav=document.getElementById("nav");
+            var oLi=oNav.getElementsByTagName("li");
+            var oSub=oNav.getElementsByClassName("menu-bd");
+            for(var i=0;i<oLi.length;i++)
+            {
+                oLi[i].onmouseover=function()
+                {
+                    for(var i=0;i<oSub.length;i++)oSub[i].style.display="none";
+                    //this.getElementsByClassName("menu-hd").style.backgroundColor="#11264f" ;
+                    var current=this.getElementsByClassName("menu-bd")[0];
+                    current.style.display="block";
+                    var oBg=this.getElementsByClassName("menu-hd")[0];
+                    oBg.style.backgroundColor="#11264f"    ;
+
+
+                }
+                oLi[i].onmouseout=function()
+                {
+                    for(var i=0;i<oSub.length;i++)
+
+                    var oBg=this.getElementsByClassName("menu-hd")[0];
+                    oBg.style.backgroundColor=""    ;
+                }
+            }
+            var aNav=document.getElementById("job_nav");
+            var aLi=aNav.getElementsByTagName("li");
+            var aSub=aNav.getElementsByClassName("menu-bd");
+            for(var i=0;i<aLi.length;i++)
+            {
+                aLi[i].onmouseover=function()
+                {
+                    for(var i=0;i<aSub.length;i++)aSub[i].style.display="none";
+                    var currentJ=this.getElementsByClassName("menu-bd")[0];
+                    currentJ.style.display="block";
+                    var aBg=this.getElementsByClassName("menu-hd")[0];
+                    aBg.style.backgroundColor="#11264f"  ;
+
+                }
+                aLi[i].onmouseout=function()
+                {
+                    for(var i=0;i<aSub.length;i++)
+
+                    var aBg=this.getElementsByClassName("menu-hd")[0];
+                    aBg.style.backgroundColor=""    ;
+
+                }
+
+
+            }
+            var wNav=document.getElementById("web_nav");
+            var wLi=wNav.getElementsByTagName("li");
+            var wSub=wNav.getElementsByClassName("menu-bd");
+            for(var i=0;i<wLi.length;i++)
+            {
+                wLi[i].onmouseover=function()
+                {
+                    for(var i=0;i<wSub.length;i++)wSub[i].style.display="none";
+                    var currentW=this.getElementsByClassName("menu-bd")[0];
+                    currentW.style.display="block";
+                    var wBg=this.getElementsByClassName("menu-hd")[0];
+                    wBg.style.backgroundColor="#11264f"  ;
+
+                }
+                wLi[i].onmouseout=function()
+                {
+                    for(var i=0;i<wSub.length;i++)
+
+                        var wBg=this.getElementsByClassName("menu-hd")[0];
+                    wBg.style.backgroundColor=""    ;
+
+                }
+
+            }
+
+        }
+    </script>
+</head>
+<body>
+<div class="nav">
+
+    <div id="logo">
+        <div><img src="/logo/logo.png"></div>
+        <div><p><span>兰大网址大全</span></br>daohang.xbwbbs.com</p></div>
+    </div>
+    <div class="weather"></div>
+    <div class="index">
+        <p>登陆西北望BBS</p>
+        <form method="post" action="http://wforum.xbwbbs.com/logon.php" target="_blank">
+            帐  号 : <input maxLength=15 name="id" size="12" id="idF"><br>
+            密  码 : <input name="passwd" size="12" type=password>
+            <input type="submit" class="submit" value="登录"/>
+        </form>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="content">
+    <div id="line_1" class="container">
+        <div class="localUsual block left float">
+            <div class="title">校内常用网站</div>
+           <div>
+               <ul>
+                   <li><a href="#" target="_blank">兰州大学主页</a></li>
+                   <li><a href="#" target="_blank">网络中心</a></li>
+                   <li><a href="#" target="_blank">综合教务管理系统</a></li>
+                   <li><a href="#" target="_blank">学工网</a></li>
+                   <li><a href="#" target="_blank">校团委</a></li>
+                   <li><a href="#" target="_blank">西北望BBS</a></li>
+                   <li><a href="#" target="_blank" >本科招生</a></li>
+                   <li><a href="#" target="_blank">研究生院</a></li>
+                   <li><a href="#" target="_blank">图书馆</a></li>
+                   <li><a href="#" target="_blank">就业网</a></li>
+                   <li><a href="#" target="_blank">兰大网络电视</a></li>
+                   <li><a href="#" target="_blank">人人网</a></li>
+                   <li><a href="#" target="_blank">新浪微博</a></li>
+                   <li><a href="#" target="_blank">126邮箱</a></li>
+                   <li><a href="#" target="_blank">教务处</a></li>
+                   <li><a href="#" target="_blank">兰大邮箱</a></li>
+                   <li><a href="#" target="_blank">Google</a></li>
+                   <li><a href="#" target="_blank">百度</a></li>
+                   <li><a href="#" target="_blank">新交互英语</a></li>
+                   <li><a href="#" target="_blank">美团网</a></li>
+                   <li><a href="#" target="_blank">西北望PT站</a></li>
+                   <li><a href="#" target="_blank">星期天社区</a></li>
+                   <li><a href="#" target="_blank">兰大BN战网</a></li>
+                   <li><a href="#" target="_blank">校园一卡通</a></li>
+                   <li><a href="#" target="_blank">兰州大学报</a></li>
+                   <li><a href="#" target="_blank">兰大新闻网</a></li>
+                   <li><a href="#" target="_blank">萃英在线</a></li>
+                   <li><a href="#" target="_blank">兰大广播电台</a></li>
+                   <li><a href="#" target="_blank">优酷网</a></li>
+                   <li><a href="#" target="_blank">淘宝网</a></li>
+
+               </ul>
+           </div>
+        </div>
+        <div class="bbs block right">
+            <div class="title">西北望BBS热推话题</div>
+
+        </div>
+    </div>
+
+    <div id="line_2" class="container">
+   <!--     <div>
+            <div class="mail">
+                <form id="loginForm" method="post" action="http://mail.lzu.edu.cn/coremail/index.jsp" target="_blank">
+                    <B><lable color="#0066CC">邮箱登陆</lable></B>
+                    <input type="text" id="uid" name="uid" class="input" size="10">
+                    <select><option selected="">@lzu.edu.cn</option></select>
+                    密码:<input type="password" name="password" class="input" size="10" autocomplete="off">
+                    <button name="action:login" type="submit" class="Button">登陆</button>
+                </form>
+            </div>
+            <div class="search">
+                <iframe id="baiduframe" border="0" vspace="0" hspace="0" marginwidth="0" marginheight="0" framespacing="0" frameborder="0" scrolling="no" width="360" height="30" src="http://unstat.baidu.com/bdun.bsc?tn=chenyingkm2z&csid=107&rkcs=0&bgcr=FFFFFF&ftcr=000000&rk=1&bd=0&bdas=0"></iframe>
+            </div>
+        </div>     -->
+        <div class="schedule">
+            <p>校车发车时间 本部 发往 榆中 7:40 9:40 12:40 14:30 16:10 17:30 19:00 榆中 发往 本部 8:10 10:50 12:50 13:30 13:50 16:45 17:25 15:45 20:45</p>
+        </div>
+    </div>
+    <div id="line_3" class="container">
+        <div class="teaching block left float" >
+            <div class="title">教学单位</div>
+            <div>
+                <ul>
+                    <li><a href="#" target="_blank">萃英学院</a></li>
+                    <li><a href="#" target="_blank">国际文化交流</a></li>
+                    <li><a href="#" target="_blank">文学院</a></li>
+                    <li><a href="#" target="_blank">新闻院</a></li>
+                    <li><a href="#" target="_blank">历史院</a></li>
+                    <li><a href="#" target="_blank">民族研究院</a></li>
+                    <li><a href="#" target="_blank">哲学社会学院</a></li>
+                    <li><a href="#" target="_blank">经济学院</a></li>
+                    <li><a href="#" target="_blank">管理学院</a></li>
+                    <li><a href="#" target="_blank">政治与行政学院</a></li>
+                    <li><a href="#" target="_blank">外国语学院</a></li>
+                    <li><a href="#" target="_blank">法学院</a></li>
+                    <li><a href="#" target="_blank">艺术学院</a></li>
+                    <li><a href="#" target="_blank">教育学院</a></li>
+                    <li><a href="#" target="_blank">数学与统计学院</a></li>
+                    <li><a href="#" target="_blank">物理院</a></li>
+                    <li><a href="#" target="_blank">核学院</a></li>
+                    <li><a href="#" target="_blank">信息院</a></li>
+                    <li><a href="#" target="_blank">化学化工学院</a></li>
+                    <li><a href="#" target="_blank">草科学院</a></li>
+                    <li><a href="#" target="_blank">生命科学学院</a></li>
+                    <li><a href="#" target="_blank">大气科学学院</a></li>
+                    <li><a href="#" target="_blank">资源环境学院</a></li>
+                    <li><a href="#" target="_blank">西环院</a></li>
+                    <li><a href="#" target="_blank">土木工程学院</a></li>
+                    <li><a href="#" target="_blank">地矿院</a></li>
+                    <li><a href="#" target="_blank">药学院</a></li>
+                    <li><a href="#" target="_blank">基础医学院</a></li>
+                    <li><a href="#" target="_blank">口腔医学院</a></li>
+                    <li><a href="#" target="_blank">公共卫生学院</a></li>
+                    <li><a href="#" target="_blank">体育教研部</a></li>
+                    <li><a href="#" target="_blank">继续教育学院</a></li>
+                    <li><a href="#" target="_blank">网络教育学院</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="science block right float">
+            <div class="title">科研单位</div>
+            <div>
+                <ul>
+                    <li><a href="#" target="_blank">兰州大学科学技术处</a></li>
+                    <li><a href="#" target="_blank">兰州大学社会科学处</a></li>
+                    <li><a href="#" target="_blank">实验室及研究基地</a></li>
+                    <li><a href="#" target="_blank">兰大学术期刊</a></li>
+                    <li><a href="#" target="_blank">博士后科研流动站</a></li>
+                    <li><a href="#" target="_blank">资产经营有限公司</a></li>
+                    <li><a href="#" target="_blank">兰州大学出版社</a></li>
+                    <li><a href="#" target="_blank">兰州大学国家大学科技园</a></li>
+                    <li><a href="#" target="_blank">兰大科技开发有限公司</a></li>
+                    <li><a href="#" target="_blank">兰大科技广场</a></li>
+                    <li><a href="#" target="_blank">兰州大学第一医院</a></li>
+                    <li><a href="#" target="_blank">兰州大学第二医院</a></li>
+                    <li><a href="#" target="_blank">兰州大学口腔医学院</a></li>
+                    <li><a href="#" target="_blank">兰州大学校医院</a></li>
+                    <li><a href="#" target="_blank">甘肃省重点实验室</a></li>
+                    <li><a href="#" target="_blank">兰州大学博物馆</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div id="line_4" class="container">
+        <div class="conductor block left float">
+            <div class="title">组织机构</div>
+            <div class="conUp">
+                <div>
+                    <ul>
+                        <li><a href="#" target="_blank">党委办公室</a></li>
+                        <li><a href="#" target="_blank">纪委监察处</a></li>
+                        <li><a href="#" target="_blank">党委宣传部</a></li>
+                        <li><a href="#" target="_blank">党委组织部</a></li>
+                        <li><a href="#" target="_blank">统战部</a></li>
+                        <li><a href="#" target="_blank">党校</a></li>
+                        <li><a href="#" target="_blank">学工网</a></li>
+                        <li><a href="#" target="_blank">工会</a></li>
+                        <li><a href="#" target="_blank">团委</a></li>
+                        <li><a href="#" target="_blank">教务处</a></li>
+                        <li><a href="#" target="_blank">保卫部</a></li>
+                        <li><a href="#" target="_blank">人事处</a></li>
+                        <li><a href="#" target="_blank">校长办公室</a></li>
+                        <li><a href="#" target="_blank">机关党委</a></li>
+                        <li><a href="#" target="_blank">直属单位党委</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="conDn">
+                <div>
+                    <ul>
+                        <li><a href="#" target="_blank">发展规划处</a></li>
+                        <li><a href="#" target="_blank">重点建设处</a></li>
+                        <li><a href="#" target="_blank">财务处</a></li>
+                        <li><a href="#" target="_blank">审计处</a></li>
+                        <li><a href="#" target="_blank">国资处</a></li>
+                        <li><a href="#" target="_blank">实验室与设备处</a></li>
+                        <li><a href="#" target="_blank">基建处</a></li>
+                        <li><a href="#" target="_blank">离退休工作处</a></li>
+                        <li><a href="#" target="_blank">后勤管理</a></li>
+                        <li><a href="#" target="_blank">医学管理处</a></li>
+                        <li><a href="#" target="_blank">信访办</a></li>
+                        <li><a href="#" target="_blank">档案管</a></li>
+                        <li><a href="#" target="_blank">学报编辑部</a></li>
+                        <li><a href="#" target="_blank">信息办</a></li>
+                        <li><a href="#" target="_blank">社科处</a></li>
+                        <li><a href="#" target="_blank">校园一卡通</a></li>
+                        <li><a href="#" target="_blank">后勤集团</a></li>
+                        <li><a href="#" target="_blank">外事处</a></li>
+                        <li><a href="#" target="_blank">校友办公室</a></li>
+                        <li><a href="#" target="_blank">就业办公室</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="outUsual block right float">
+            <div class="title">校外常用网站</div>
+            <div>
+                <ul>
+                    <li><a href="#" target="_blank">百度</a></li>
+                    <li><a href="#" target="_blank">腾讯</a></li>
+                    <li><a href="#" target="_blank">新浪</a></li>
+                    <li><a href="#" target="_blank">网易</a></li>
+                    <li><a href="#" target="_blank">搜狐</a></li>
+                    <li><a href="#" target="_blank">凤凰</a></li>
+                    <li><a href="#" target="_blank">人人网</a></li>
+                    <li><a href="#" target="_blank">开心网</a></li>
+                    <li><a href="#" target="_blank">猫扑</a></li>
+                    <li><a href="#" target="_blank">360安全卫士</a></li>
+                    <li><a href="#" target="_blank">淘宝网</a></li>
+                    <li><a href="#" target="_blank">当当网</a></li>
+                    <li><a href="#" target="_blank">亚马逊</a></li>
+                    <li><a href="#" target="_blank">赶集网</a></li>
+                    <li><a href="#" target="_blank">京东商城</a></li>
+                    <li><a href="#" target="_blank">优酷</a></li>
+                    <li><a href="#" target="_blank">土豆</a></li>
+                    <li><a href="#" target="_blank">CNTV</a></li>
+                    <li><a href="#" target="_blank">智联招聘</a></li>
+                    <li><a href="#" target="_blank">中关村</a></li>
+                    <li><a href="#" target="_blank">谷歌</a></li>
+                    <li><a href="#" target="_blank">中国移动</a></li>
+                    <li><a href="#" target="_blank">天涯社区</a></li>
+                    <li><a href="#" target="_blank">人民网</a></li>
+                    <li><a href="#" target="_blank">新华网</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="line_5" class="container">
+        <div class="exam block left ">
+            <div class="title">校外教育考试</div>
+            <div id="nav">
+                <ul class="l_side">
+                    <li> <a class="menu-hd" id="JY">教育综合</a>
+                        <div class="menu-bd" style="display: block" name="play">
+
+                            <a href="#" target="_blank">教育信息网</a>
+                            <a href="#" target="_blank">学信网</a>
+                            <a href="#" target="_blank">腾讯教育网</a>
+                            <a href="#" target="_blank">新浪教育</a>
+                            <a href="#" target="_blank">搜狐教育</a>
+                            <a href="#" target="_blank">教育点评</a>
+                            <a href="#" target="_blank">人教学习网</a>
+
+                        </div>
+
+
+                    </li>
+                    <li><a class="menu-hd">考试综合</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">考试吧</a>
+                            <a href="#" target="_blank">无忧考试</a>
+                            <a href="#" target="_blank">中国教育考试</a>
+                            <a href="#" target="_blank">浩然考试</a>
+                            <a href="#" target="_blank">中华考试</a>
+                            <a href="#" target="_blank">考试大网</a>
+                            <a href="#" target="_blank">精品学习网</a>
+
+                        </div>
+
+
+                    </li>
+                    <li><a class="menu-hd">学术科研</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">小木虫</a>
+                            <a href="#" target="_blank">子午学术网</a>
+                            <a href="#" target="_blank">虚拟图书馆</a>
+                            <a href="#" target="_blank">龙源期刊网</a>
+                            <a href="#" target="_blank">Google学术</a>
+                            <a href="#" target="_blank">科学网</a>
+                            <a href="#" target="_blank">中科院官网</a>
+
+                        </div>
+
+
+                    </li>
+                    <li><a class="menu-hd">学习资源</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">学习啦网</a>
+                            <a href="#" target="_blank">百度文库</a>
+                            <a href="#" target="_blank">豆丁网</a>
+                            <a href="#" target="_blank">老牛文档</a>
+                            <a href="#" target="_blank">道客巴巴</a>
+                            <a href="#" target="_blank">好文网 </a>
+
+                        </div>
+
+                    </li>
+                    <li><a class="menu-hd">考研专题</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">研招信息网</a>
+                            <a href="#" target="_blank">免费考研网</a>
+                            <a href="#" target="_blank">考研共济</a>
+                            <a href="#" target="_blank">腾讯考研</a>
+                            <a href="#" target="_blank">考研论坛</a>
+                            <a href="#" target="_blank">新浪考研</a>
+                            <a href="#" target="_blank">中国考研网</a>
+
+                        </div>
+
+
+                    </li>
+                    <li><a class="menu-hd">考普通话</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">无忧普通话</a>
+                            <a href="#" target="_blank">浩然普通话</a>
+                            <a href="#" target="_blank">普通话学习网</a>
+                            <a href="#" target="_blank">普通话测试网</a>
+                            <a href="#" target="_blank">欣欣普通话学习</a>
+                            <a href="#" target="_blank">畅言网</a>
+
+                        </div>
+
+
+                    </li>
+                    <li><a class="menu-hd">考计算机</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">计算机考试网</a>
+                            <a href="#" target="_blank">菊花论坛网</a>
+                            <a href="#" target="_blank">计算机考试吧网</a>
+                            <a href="#" target="_blank">计算机等级考试吧</a>
+                        </div>
+
+                    </li>
+                </ul>
+                <ul class="r_side ">
+                    <li><a class="menu-hd">英语学习</a>
+                        <div class="menu-bd" name="play">
+                            <a href="#" target="_blank">英语考试网</a>
+                            <a href="#" target="_blank">旺旺英语学习网</a>
+                            <a href="#" target="_blank">沪江英语网</a>
+                            <a href="#" target="_blank">中国英语网</a>
+                            <a href="#" target="_blank">四六级官网</a>
+                            <a href="#" target="_blank">四六级考网</a>
+
+                        </div>
+                    </li>
+                    <li><a class="menu-hd">托福雅思</a>
+                        <div class="menu-bd" name="play">
+                            <a href="#" target="_blank">托福线上资讯网</a>
+                            <a href="#" target="_blank">托福考试官网</a>
+                            <a href="#" target="_blank">中国雅思网</a>
+                            <a href="#" target="_blank">IELTS</a>
+
+                        </div>
+
+
+                    </li>
+                    <li><a class="menu-hd">财会考试</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">注会师考试网</a>
+                            <a href="#" target="_blank">中华会计网校</a>
+                            <a href="#" target="_blank">财考网</a>
+                            <a href="#" target="_blank">注册金融分析师</a>
+                            <a href="#" target="_blank">中国财会网</a>
+                            <a href="#" target="_blank">会计师视野</a>
+
+                        </div>
+
+
+                    </li>
+                    <li><a class="menu-hd">MBA专题</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">中国MBA网</a>
+                            <a href="#" target="_blank">华章教育网</a>
+                            <a href="#" target="_blank">中国MBA备考网</a>
+                            <a href="#" target="_blank">中国MBA教育网</a>
+                            <a href="#" target="_blank">华宏MBA网</a>
+
+                        </div>
+
+
+                    </li>
+                    <li><a class="menu-hd">司法考试</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">中国普法网</a>
+                            <a href="#" target="_blank">法律教育网</a>
+                            <a href="#" target="_blank">司法考试在线<</a>
+                            <a href="#" target="_blank">万国司法网</a>
+                            <a href="#" target="_blank">司法考试网</a>
+                            <a href="#" target="_blank">国家司法部网</a>
+
+                        </div>
+
+
+                    </li>
+                    <li><a class="menu-hd">其他职考</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">国家医学考试</a>
+                            <a href="#" target="_blank">海关公务员考试</a>
+                            <a href="#" target="_blank">建造师</a>
+                            <a href="#" target="_blank">翻译考试</a>
+                            <a href="#" target="_blank">职业资格考试</a>
+                            <a href="#" target="_blank">职称考评资讯</a>
+
+                        </div>
+
+
+                    </li>
+                    <li><a class="menu-hd">自学考试</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">中国自考网</a>
+                            <a href="#" target="_blank">自考资讯网</a>
+                            <a href="#" target="_blank">新浪自考</a>
+                            <a href="#" target="_blank">腾讯自考</a>
+                            <a href="#" target="_blank">自考365</a>
+                            <a href="#" target="_blank">自考招生在线</a>
+                            <a href="#" target="_blank">易自考</a>
+
+                        </div>
+
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="job block right">
+            <div class="title">校外就业求职</div>
+            <div id="job_nav">
+                <ul class="l_side">
+                    <li> <a class="menu-hd" id="cg">村官</a>
+                        <div class="menu-bd" style="display: block" name="play">
+
+                            <a href="#" target="_blank">大学生村官论坛</a>
+                            <a href="#" target="_blank">中国大学生村官网</a>
+                            <a href="#" target="_blank">大学生村官之家网</a>
+
+                        </div>
+                    </li>
+                    <li> <a class="menu-hd" id="gwy">公务员</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">国家人事部</a>
+                            <a href="#" target="_blank">华图教育网</a>
+                            <a href="#" target="_blank">公务员考试网</a>
+                            <a href="#" target="_blank">国家公务员网</a>
+                            <a href="#" target="_blank">公务员论坛</a>
+
+                        </div>
+                    </li>
+                    <li> <a class="menu-hd" id="sx">兼职实习</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">第一家教</a>
+                            <a href="#" target="_blank">尚学家教网</a>
+                            <a href="#" target="_blank">就爱兼职</a>
+                            <a href="#" target="_blank">国家公务员网</a>
+                            <a href="#" target="_blank">1010兼职</a>
+
+                        </div>
+                    </li>
+                    <li> <a class="menu-hd" id="abord">出国留学</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">寄托天下网</a>
+                            <a href="#" target="_blank">滴答网</a>
+                            <a href="#" target="_blank">新浪留学</a>
+                            <a href="#" target="_blank">留学在线</a>
+                            <a href="#" target="_blank">教育涉外监管</a>
+
+                        </div>
+                    </li>
+                </ul>
+                <ul class="r_side">
+                    <li> <a class="menu-hd" id="qz">工作求职</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">前程无忧</a>
+                            <a href="#" target="_blank">中华英才</a>
+                            <a href="#" target="_blank">百大应届生</a>
+                            <a href="#" target="_blank">卓博人才</a>
+                            <a href="#" target="_blank">智联招聘</a>
+                            <a href="#" target="_blank">应届生求职</a>
+
+                        </div>
+                    </li>
+                    <li> <a class="menu-hd" id="gh">职业规划</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">职业规划中国网</a>
+                            <a href="#" target="_blank">独之秀职业规划</a>
+                            <a href="#" target="_blank">大学生职业规划网</a>
+
+                        </div>
+                    </li>
+                    <li> <a class="menu-hd" id="px">职业培训</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">远播教育网</a>
+                            <a href="#" target="_blank">东方教育网</a>
+                            <a href="#" target="_blank">新东方培训网</a>
+                            <a href="#" target="_blank">创新培训网</a>
+                            <a href="#" target="_blank">中华培训网</a>
+
+                        </div>
+                    </li>
+                    <li> <a class="menu-hd" id="xs">励志修身</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">中华励志</a>
+                            <a href="#" target="_blank">第一成功</a>
+                            <a href="#" target="_blank">人生哲理</a>
+                            <a href="#" target="_blank">名人名言</a>
+                            <a href="#" target="_blank">大学生励志网</a>
+                            <a href="#" target="_blank">我心依旧</a>
+
+                        </div>
+                    </li>
+
+                </ul>
+        </div>
+    </div>
+    <div id="line_6" class="container">
+        <div class="outOther block left">
+            <div class="title">校外其他网站</div>
+            <div id="web_nav">
+                <ul class="l_side">
+                    <li> <a class="menu-hd" id="movie">影视</a>
+                        <div class="menu-bd" style="display: block" name="play">
+
+                            <a href="#" target="_blank">优酷</a>
+                            <a href="#" target="_blank">土豆</a>
+                            <a href="#" target="_blank">搜狐</a>
+                            <a href="#" target="_blank">乐视网</a>
+                            <a href="#" target="_blank">奇艺</a>
+                            <a href="#" target="_blank">酷六网</a>
+                            <a href="#" target="_blank">CNTV</a>
+                            <a href="#" target="_blank">迅雷电影</a>
+                            <a href="#" target="_blank">百度影视</a>
+                            <a href="#" target="_blank">新浪影视</a>
+
+                        </div>
+                    </li>
+                    <li> <a class="menu-hd" id="notion">小说</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">起点中文网</a>
+                            <a href="#" target="_blank">小说阅读网</a>
+                            <a href="#" target="_blank">3G免费书城</a>
+                            <a href="#" target="_blank">晋江原创网</a>
+                            <a href="#" target="_blank">逐浪文学网</a>
+                            <a href="#" target="_blank">txt小说网</a>
+                            <a href="#" target="_blank">铁血军事小说</a>
+
+                        </div>
+                    </li>
+                    <li> <a class="menu-hd" id="music">音乐</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">酷我音乐</a>
+                            <a href="#" target="_blank">一听音乐网</a>
+                            <a href="#" target="_blank">酷狗音乐</a>
+                            <a href="#" target="_blank">QQ音乐</a>
+                            <a href="#" target="_blank">百度MP3</a>
+                            <a href="#" target="_blank">千千音乐</a>
+                            <a href="#" target="_blank">音悦台高清MV</a>
+
+                        </div>
+                    </li>
+                    <li> <a class="menu-hd" id="shop">购物</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">淘宝网</a>
+                            <a href="#" target="_blank">卓越网</a>
+                            <a href="#" target="_blank">当当网</a>
+                            <a href="#" target="_blank">淘宝商城</a>
+                            <a href="#" target="_blank">苏宁易购</a>
+                            <a href="#" target="_blank">京东商城</a>
+                            <a href="#" target="_blank">搜房网</a>
+                            <a href="#" target="_blank">名鞋库鞋城</a>
+
+                        </div>
+                    </li>
+                    <li> <a class="menu-hd" id="relax">休闲</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">QQ空间</a>
+                            <a href="#" target="_blank">新浪微博</a>
+                            <a href="#" target="_blank">天涯社区</a>
+                            <a href="#" target="_blank">猫扑</a>
+                            <a href="#" target="_blank">百度贴吧</a>
+                            <a href="#" target="_blank">人人网</a>
+                            <a href="#" target="_blank">搜狐圈子</a>
+                            <a href="#" target="_blank">豆瓣网</a>
+
+                        </div>
+                    </li>
+                    <li> <a class="menu-hd" id="bank">银行</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">招商银行</a>
+                            <a href="#" target="_blank">工商银行</a>
+                            <a href="#" target="_blank">建设银行</a>
+                            <a href="#" target="_blank">中国银行</a>
+                            <a href="#" target="_blank">农业银行</a>
+                            <a href="#" target="_blank">广发银行</a>
+                            <a href="#" target="_blank">中国银联</a>
+                            <a href="#" target="_blank">支付宝</a>
+                            <a href="#" target="_blank">财付通</a>
+
+                        </div>
+                    </li>
+                </ul>
+                <ul class="r_side">
+                    <li> <a class="menu-hd" id="gem">体育</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">新浪体育</a>
+                            <a href="#" target="_blank">搜狐体育</a>
+                            <a href="#" target="_blank">网易体育</a>
+                            <a href="#" target="_blank">鲨威体坛</a>
+                            <a href="#" target="_blank">NBA中文网</a>
+                            <a href="#" target="_blank">雅虎体育</a>
+                            <a href="#" target="_blank">体遨网</a>
+
+                        </div>
+                    </li>
+                    <li> <a class="menu-hd" id="army">军事</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">中华网军事</a>
+                            <a href="#" target="_blank">比邻军情网</a>
+                            <a href="#" target="_blank">西陆军事</a>
+                            <a href="#" target="_blank">环球军事</a>
+                            <a href="#" target="_blank">铁血军事</a>
+                            <a href="#" target="_blank">新浪军事</a>
+                            <a href="#" target="_blank">战略网</a>
+                            <a href="#" target="_blank">中国国防部</a>
+
+                        </div>
+                    </li>
+                    <li> <a class="menu-hd" id="news">新闻</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">新浪新闻</a>
+                            <a href="#" target="_blank">人民网</a>
+                            <a href="#" target="_blank">腾讯新闻</a>
+                            <a href="#" target="_blank">网易新闻</a>
+                            <a href="#" target="_blank">环球网</a>
+                            <a href="#" target="_blank">中国日报</a>
+                            <a href="#" target="_blank">天涯国际观察</a>
+                            <a href="#" target="_blank">凤凰资讯</a>
+
+                        </div>
+                    </li>
+                    <li> <a class="menu-hd" id="computer">电脑</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">IT168电脑</a>
+                            <a href="#" target="_blank">天极数码</a>
+                            <a href="#" target="_blank">泡泡网</a>
+                            <a href="#" target="_blank">绿色下载吧</a>
+                            <a href="#" target="_blank">中关村在线</a>
+                            <a href="#" target="_blank">天空软件</a>
+
+                        </div>
+                    </li>
+                    <li> <a class="menu-hd" id="phone">手机</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">移动营业厅</a>
+                            <a href="#" target="_blank">联通营业厅</a>
+                            <a href="#" target="_blank">电信营业厅</a>
+                            <a href="#" target="_blank">手机之家</a>
+                            <a href="#" target="_blank">太平洋手机</a>
+                            <a href="#" target="_blank">iPhone中文网</a>
+                            <a href="#" target="_blank">Android中文网</a>
+
+                        </div>
+                    </li>
+                    <li> <a class="menu-hd" id="cloud">网盘</a>
+                        <div class="menu-bd" name="play">
+
+                            <a href="#" target="_blank">115网盘</a>
+                            <a href="#" target="_blank">纳米盘</a>
+                            <a href="#" target="_blank">RayFile网盘</a>
+                            <a href="#" target="_blank">QQ网盘</a>
+                            <a href="#" target="_blank">金山快盘</a>
+                            <a href="#" target="_blank">盛大网盘</a>
+                            <a href="#" target="_blank">华为网盘</a>
+                            <a href="#" target="_blank">百度云盘</a>
+                            <a href="#" target="_blank">新浪微盘</a>
+
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="download block right float" >
+            <div class="title">常用软件下载</div>
+            <div>
+                <ul>
+                    <li><a href="#" target="_blank">迅雷7</a></li>
+                    <li><a href="#" target="_blank">网际快车</a></li>
+                    <li><a href="#" target="_blank">QQ旋风</a></li>
+                    <li><a href="#" target="_blank">QQ2013</a></li>
+                    <li><a href="#" target="_blank">飞信2013</a></li>
+                    <li><a href="#" target="_blank">万能五笔</a></li>
+                    <li><a href="#" target="_blank">搜狗输入法</a></li>
+                    <li><a href="#" target="_blank">QQ输入法</a></li>
+                    <li><a href="#" target="_blank">百度输入法</a></li>
+                    <li><a href="#" target="_blank">搜狗浏览器</a></li>
+                    <li><a href="#" target="_blank">火狐浏览器</a></li>
+                    <li><a href="#" target="_blank">Chrome浏览器</a></li>
+                    <li><a href="#" target="_blank">暴风影音</a></li>
+                    <li><a href="#" target="_blank">360安全卫士</a></li>
+                    <li><a href="#" target="_blank">Foxmail</a></li>
+                    <li><a href="#" target="_blank">驱动精灵</a></li>
+                    <li><a href="#" target="_blank">Photoshop</a></li>
+                    <li><a href="#" target="_blank">WinRAR免费版</a></li>
+                    <li><a href="#" target="_blank">阿里旺旺</a></li>
+                    <li><a href="#" target="_blank">金山毒霸</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<div id="footer">
+    <p>兰州大学&nbsp;&nbsp;Copyright by 西北望BBS&copy;2013. &nbsp;Email: <a href=mailto:bbs@lzu.edu.cn>bbs@lzu.edu.cn</a>&nbsp;<a href="http://bbs.lzu.edu.cn/nForum/#!board/sysop" target="_blank">提意见</a>
+        <script src="http://s16.cnzz.com/stat.php?id=5126175&web_id=5126175&online=2" language="JavaScript"></script></p>
+</div>
+<!--<div class="up" ><a href="#"></a></div> </div>  -->
+    <div class="clear">
+
+</div>
+</body>
+</html>

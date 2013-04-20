@@ -1,0 +1,54 @@
+<html>
+<head>
+    <script type="text/javascript" src="build/yui/yui-min.js"></script>
+
+        <style type="text/css">
+        /* The rail and end cap images are shared in a sprite */
+        .yui3-skin-capsule .yui3-slider-x .yui3-slider-rail,
+        .yui3-skin-capsule .yui3-slider-x .yui3-slider-rail-cap-left,
+        .yui3-skin-capsule .yui3-slider-x .yui3-slider-rail-cap-right {
+            background-image: url(build/slider-base/assets/skins/capsule/rail-x-lines.png);
+        }
+        </style>
+
+                <script>
+        YUI({ skin: { overrides: { slider: [ 'capsule' ] } } })
+                .use( "slider", function (Y) {
+
+                    var slider = new Y.Slider({
+                        axis    : 'y',
+                        min     : 1,
+                        max     : 5,
+                        value   : 3,
+                        length  : '100px',
+                        thumbUrl: Y.config.base + 'build/slider-base/assets/skins/capsule/thumb-x-line.png'
+                    });
+
+                    slider.render("#slider-parent");
+
+                });
+    </script>
+
+</head>
+<body class="yui3-skin-night"> <!-- You need this skin class -->
+<!-- boundingBox -->
+<span class="yui3-widget yui3-sliderbase yui-slider">
+    <!-- contentBox -->
+    <span class="yui3-slider-content yui3-slider-x"><!-- or slider-y -->
+
+        <!-- rail -->
+        <span class="yui3-slider-rail">
+            <span class="yui3-slider-rail-cap-left"></span><!-- or cap-top -->
+            <span class="yui3-slider-rail-cap-right"></span><!-- or cap-bottom -->
+
+            <!-- thumb -->
+            <span class="yui3-slider-thumb">
+                <img class="yui3-slider-thumb-shadow">
+                <img class="yui3-slider-thumb-image">
+            </span>
+        </span>
+
+    </span>
+</span>
+</body>
+</html>

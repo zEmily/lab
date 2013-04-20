@@ -1,0 +1,166 @@
+@charset "GBK";
+.TabbedPanels {
+	overflow: hidden;
+	margin: 0px;
+	padding: 2px;
+	clear: none;
+	width: 100%; /* IE Hack to force proper layout when preceded by a paragraph. (hasLayout Bug)*/
+}
+
+.TabbedPanelsTabGroup {
+	margin: 0px;
+	padding: 0px;
+}
+
+.TabbedPanelsTab {
+	position: relative;
+	top: 1px;
+	float: left;
+	padding: 4px 10px;
+	margin: 0px 1px 0px 0px;
+	font: bold 10pt sans-serif;
+	list-style: none;
+	border-left: solid thin #06F;
+	border-bottom: solid thin #06F;
+	border-top: solid thin #06F;
+	border-right: solid thin #06F;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	cursor: pointer;
+}
+
+.TabbedPanelsTabHover{
+}
+
+.TabbedPanelsTabSelected {
+	border-bottom: 1px solid #EEE;
+}
+
+.TabbedPanelsTab a {
+	color: black;
+	text-decoration: none;
+}
+
+.TabbedPanelsContentGroup {
+	clear: both;
+	border-left: solid thin   #06F;
+	border-bottom: solid thin #06F;
+	border-top: solid thin #06F;
+	border-right: solid thin #06F;
+}
+
+.TabbedPanelsContent {
+	overflow: hidden;
+	padding: 4px;
+	text-align:left;
+}
+
+.TabbedPanelsContentVisible {
+}
+
+.VTabbedPanels {
+	overflow: hidden;
+	zoom: 1;
+}
+
+.VTabbedPanels .TabbedPanelsTabGroup {
+	float: left;
+	width: 10em;
+	height: 20em;
+	position: relative;
+	border-top: solid thin  #06F;
+	border-right: solid thin #06F;
+	border-left: solid thin #06F;
+	border-bottom: solid thin #06F;
+}
+
+.VTabbedPanels .TabbedPanelsTab {
+	float: left;
+	margin: 0px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.VTabbedPanels .TabbedPanelsTabSelected {
+	border-bottom: solid 1px #999;
+}
+
+.VTabbedPanels .TabbedPanelsContentGroup {
+	clear: none;
+	float: left;
+	padding: 2x;
+	width: 30em;
+	height: 20em;
+}
+
+/* Styles for Printing */
+@media print {
+.TabbedPanels {
+	overflow: visible !important;
+}
+.TabbedPanelsContentGroup {
+	display: block !important;
+	overflow: visible !important;
+	height: auto !important;
+}
+.TabbedPanelsContent {
+	overflow: visible !important;
+	display: block !important;
+	clear:both !important;
+}
+.TabbedPanelsTab {
+	 overflow: visible !important;
+	 display: block !important;
+	 clear:both !important;
+}
+}
+
+.blue a:link {
+	color: #00F;
+	text-decoration: none;
+}
+.blue a:hover {
+	color: #00F !important;
+	text-decoration: underline !important;
+}
+.blue a {
+	color: #00F !important;
+	text-decoration: none !important;
+}
+.black a {
+	color: #333;
+	text-decoration: none;
+}
+.black a:link {
+	color: #333;
+	text-decoration: none;
+}
+.black a:hover {
+	color: #F00;
+	text-decoration: underline;
+}
+.red a {
+	color: #F00;
+	text-decoration: none;
+}
+.red a:link {
+	color: #F00;
+	text-decoration: none;
+}
+.red a:hover {
+	color: #F00;
+	text-decoration: underline;
+}
+.white a {
+	color: #FFF;
+	text-decoration: none;
+}
+.white a:link {
+	color: #FFF;
+	text-decoration: none;
+}
+.white a:hover {
+	color: #CCC;
+	text-decoration: underline;
+}

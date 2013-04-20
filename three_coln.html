@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3列</title>
+    <style>
+        body,div,ul,li,p{margin:0;padding:0;}
+        body{font:15px/1.5 Arial;}
+        ul,li{list-style-type:none;}
+    #nav{position:relative;width:80px;height:150px;margin:0 auto;}
+    .menu-bd {position:absolute;top:0;left:80px;;width:150px;height:300px;display: none;}
+    .menu-hd  {display:block;width:80px;height:20px;}
+
+    </style>
+    <script>
+        var get={
+            byId:function(id){
+                return document.getElementById(id)
+            },
+            byClass:function(sClass, oParent){
+                var aClass=[];
+                var reClass=new RegExp("(^|)"+sClass+"(|$)");
+                var aElem=this.byTagName("*",oParent);
+                for(var i=0;i<aElem.length;i++)reClass.test(aElem[i].className)&&aClass.push(aElem[i]);
+                return aClass
+            },
+            byTagName:function(elem,obj){
+                return (obj || document).getElementsByTagName(elem)
+            }
+        };
+        window.onload=function()
+        {
+            var oNav=get.byId("nav");
+            var aLi=get.byTagName("li",oNav);
+            var aMenuBd=get.byClass("menu-bd",oNav);
+            //var oMenuBd=oEm=timer=null;
+
+            for(var i=0;i<aLi.length;i++)
+            {
+                aLi[i].onmouseover=function(){
+                    for(i=0;i<aMenuBd.length;i++)aMenuBd[i].style.display="none";
+
+                    oMenuBd=get.byClass("menu-bd",this)[0];
+                    //oEm=get.byTagName("em",this)
+                    oMenuBd.style.display="block";
+                    clearTimeout(timer);
+                    oMenuBd.onmouseover=function(event)
+                    {
+                        (event||window.event).canceBubble=true;
+                        clearTimeout(timer)
+                    }
+                };
+                aLi[i].onmouseout=function()
+                {
+                    timer=setTimeout(function(){
+                        oMenuBd.style.display="none"
+                    },1000)
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+<div id="nav">
+<ul >
+    <li> <a class="menu-hd" id="JY" href="#">教育综合</a>
+            <div class="menu-bd" style="display: block" name="play">
+
+                    <a href="#" target="_blank">教育信息网</a>
+                    <a href="#" target="_blank">学信网</a>
+                    <a href="#" target="_blank">腾讯教育网</a>
+                    <a href="#" target="_blank">新浪教育</a>
+                    <a href="#" target="_blank">搜狐教育</a>
+                    <a href="#" target="_blank">教育点评</a>
+                    <a href="#" target="_blank">人教学习网</a>
+
+                </div>
+
+
+    </li>
+    <li><a class="menu-hd">考试综合</a>
+            <div class="menu-bd" name="play">
+
+                    <a href="#" target="_blank">考试吧</a>
+                    <a href="#" target="_blank">无忧考试</a>
+                    <a href="#" target="_blank">中国教育考试</a>
+                    <a href="#" target="_blank">浩然考试</a>
+                    <a href="#" target="_blank">中华考试</a>
+                    <a href="#" target="_blank">考试大网</a>
+                    <a href="#" target="_blank">精品学习网</a>
+
+                </div>
+
+
+    </li>
+    <li><a class="menu-hd">学术科研</a>
+            <div class="menu-bd" name="play">
+
+                    <a href="#" target="_blank">小木虫</a>
+                    <a href="#" target="_blank">子午学术网</a>
+                    <a href="#" target="_blank">虚拟图书馆</a>
+                    <a href="#" target="_blank">龙源期刊网</a>
+                    <a href="#" target="_blank">Google学术</a>
+                    <a href="#" target="_blank">科学网</a>
+                    <a href="#" target="_blank">中科院官网</a>
+
+                </div>
+
+
+    </li>
+    <li><a class="menu-hd">学习资源</a>
+            <div class="menu-bd" name="play">
+
+                    <a href="#" target="_blank">学习啦网</a>
+                    <a href="#" target="_blank">百度文库</a>
+                    <a href="#" target="_blank">豆丁网</a>
+                    <a href="#" target="_blank">老牛文档</a>
+                    <a href="#" target="_blank">道客巴巴</a>
+                    <a href="#" target="_blank">好文网 </a>
+
+                </div>
+
+    </li>
+    <li><a class="menu-hd">考研专题</a>
+            <div class="menu-bd" name="play">
+
+                    <a href="#" target="_blank">研招信息网</a>
+                    <a href="#" target="_blank">免费考研网</a>
+                    <a href="#" target="_blank">考研共济</a>
+                    <a href="#" target="_blank">腾讯考研</a>
+                    <a href="#" target="_blank">考研论坛</a>
+                    <a href="#" target="_blank">新浪考研</a>
+                    <a href="#" target="_blank">中国考研网</a>
+
+                </div>
+
+
+    </li>
+    <li><a class="menu-hd">考普通话</a>
+            <div class="menu-bd" name="play">
+
+                    <a href="#" target="_blank">无忧普通话</a>
+                    <a href="#" target="_blank">浩然普通话</a>
+                    <a href="#" target="_blank">普通话学习网</a>
+                    <a href="#" target="_blank">普通话测试网</a>
+                    <a href="#" target="_blank">欣欣普通话学习</a>
+                    <a href="#" target="_blank">畅言网</a>
+
+                </div>
+
+
+    </li>
+    <li><a class="menu-hd">考计算机</a>
+            <div class="menu-bd" name="play">
+
+                    <a href="#" target="_blank">计算机考试网</a>
+                    <a href="#" target="_blank">菊花论坛网</a>
+                    <a href="#" target="_blank">计算机考试吧网</a>
+                    <a href="#" target="_blank">计算机等级考试吧</a>
+                </div>
+
+    </li>
+</ul>
+<!--<ul class="r_side nav">
+    <li><a class="menu-hd">英语学习</a>
+            <div class="menu-bd">
+                <div class="menu-bd-panel">
+                    <a href="#" target="_blank">英语考试网</a>
+                    <a href="#" target="_blank">旺旺英语学习网</a>
+                    <a href="#" target="_blank">沪江英语网</a>
+                    <a href="#" target="_blank">中国英语网</a>
+                    <a href="#" target="_blank">四六级官网</a>
+                    <a href="#" target="_blank">四六级考网</a>
+
+                </div>
+            </div>
+
+    </li>
+    <li><a class="menu-hd">托福雅思</a>
+            <div class="menu-bd">
+                <div class="menu-bd-panel">
+                    <a href="#" target="_blank">托福线上资讯网</a>
+                    <a href="#" target="_blank">托福考试官网</a>
+                    <a href="#" target="_blank">中国雅思网</a>
+                    <a href="#" target="_blank">IELTS</a>
+
+                </div>
+            </div>
+
+    </li>
+    <li><a class="menu-hd">财会考试</a>
+            <div class="menu-bd">
+                <div class="menu-bd-panel">
+                    <a href="#" target="_blank">注会师考试网</a>
+                    <a href="#" target="_blank">中华会计网校</a>
+                    <a href="#" target="_blank">财考网</a>
+                    <a href="#" target="_blank">注册金融分析师</a>
+                    <a href="#" target="_blank">中国财会网</a>
+                    <a href="#" target="_blank">会计师视野</a>
+
+                </div>
+            </div>
+
+    </li>
+    <li><a class="menu-hd">MBA专题</a>
+            <div class="menu-bd">
+                <div class="menu-bd-panel">
+                    <a href="#" target="_blank">中国MBA网</a>
+                    <a href="#" target="_blank">华章教育网</a>
+                    <a href="#" target="_blank">中国MBA备考网</a>
+                    <a href="#" target="_blank">中国MBA教育网</a>
+                    <a href="#" target="_blank">华宏MBA网</a>
+
+                </div>
+            </div>
+
+    </li>
+    <li><a class="menu-hd">司法考试</a>
+            <div class="menu-bd">
+                <div class="menu-bd-panel">
+                    <a href="#" target="_blank">中国普法网</a>
+                    <a href="#" target="_blank">法律教育网</a>
+                    <a href="#" target="_blank">司法考试在线<</a>
+                    <a href="#" target="_blank">万国司法网</a>
+                    <a href="#" target="_blank">司法考试网</a>
+                    <a href="#" target="_blank">国家司法部网</a>
+
+                </div>
+            </div>
+
+    </li>
+    <li><a class="menu-hd">其他职考</a>
+            <div class="menu-bd">
+                <div class="menu-bd-panel">
+                    <a href="#" target="_blank">国家医学考试</a>
+                    <a href="#" target="_blank">海关公务员考试</a>
+                    <a href="#" target="_blank">建造师</a>
+                    <a href="#" target="_blank">翻译考试</a>
+                    <a href="#" target="_blank">职业资格考试</a>
+                    <a href="#" target="_blank">职称考评资讯</a>
+
+                </div>
+            </div>
+
+    </li>
+    <li><a class="menu-hd">自学考试</a>
+            <div class="menu-bd">
+                <div class="menu-bd-panel">
+                    <a href="#" target="_blank">中国自考网</a>
+                    <a href="#" target="_blank">自考资讯网</a>
+                    <a href="#" target="_blank">新浪自考</a>
+                    <a href="#" target="_blank">腾讯自考</a>
+                    <a href="#" target="_blank">自考365</a>
+                    <a href="#" target="_blank">自考招生在线</a>
+                    <a href="#" target="_blank">易自考</a>
+
+                </div>
+            </div>
+
+    </li>
+</ul> -->
+</div>
+
+</body>
+</html>

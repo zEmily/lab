@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        window.onload=function()
+        {
+            var wNav=document.getElementById("web_nav");
+            var wLi=wNav.getElementsByTagName("li");
+            var wSub=wNav.getElementsByClassName("menu-bd");
+            for(var i=0;i<wLi.length;i++)
+            {
+                wLi[i].onmouseover=function()
+                {
+                    for(var i=0;i<wSub.length;i++)wSub[i].style.display="none";
+                    var currentW=this.getElementsByClassName("menu-bd")[0];
+                    currentW.style.display="block";
+
+                }
+
+            }
+
+        }
+    </script>
+    <style>
+        body,div,ul,li,p{margin:0;padding:0;}
+        body{font-size: 10px;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;height:20px;line-height:30px;position: relative}
+        a{text-decoration: none;}
+        #web_nav ul{list-style-type:none;width:450px;}
+        #web_nav{position:relative;width:540px;height:220px;margin:0 auto;overflow: hidden;}
+        #web_nav .l_side{position: absolute;left:0;top:0;}
+        #web_nav .r_side{position: absolute;left:450px;top:0;}
+        #web_nav .menu-hd {display:block;width:100px;height:31px;text-align: center;font-size:12px; border-bottom:solid 1px white;line-height: 31px;background:#33a3dc ;color: white;cursor: pointer;}
+        #web_nav .menu-hd:hover{background:#11264f;}
+        #web_nav .menu-bd{position:absolute;width:350px;height:217px;display: none;padding:0;}
+
+        #web_nav .l_side .menu-bd {top:0;left:100px;}
+        #web_nav .r_side .menu-bd {top:0;left:-350px;}
+        #web_nav .menu-bd a{font-size:12px;display: block;text-align:center;width:350px;color:#005580;height:20px;line-height:20px;}
+        #web_nav .menu-bd a:hover{color: #c37e00;}
+
+    </style>
+    <title></title>
+</head>
+<body>
+<div id="web_nav">
+    <ul class="l_side">
+        <li> <a class="menu-hd" id="movie">影视</a>
+            <div class="menu-bd" style="display: block" name="play">
+
+                <a href="#" target="_blank">优酷</a>
+                <a href="#" target="_blank">土豆</a>
+                <a href="#" target="_blank">搜狐</a>
+                <a href="#" target="_blank">乐视网</a>
+                <a href="#" target="_blank">奇艺</a>
+                <a href="#" target="_blank">酷六网</a>
+                <a href="#" target="_blank">CNTV</a>
+                <a href="#" target="_blank">迅雷电影</a>
+                <a href="#" target="_blank">百度影视</a>
+                <a href="#" target="_blank">新浪影视</a>
+
+            </div>
+        </li>
+        <li> <a class="menu-hd" id="notion">小说</a>
+            <div class="menu-bd" name="play">
+
+                <a href="#" target="_blank">起点中文网</a>
+                <a href="#" target="_blank">小说阅读网</a>
+                <a href="#" target="_blank">3G免费书城</a>
+                <a href="#" target="_blank">晋江原创网</a>
+                <a href="#" target="_blank">逐浪文学网</a>
+                <a href="#" target="_blank">txt小说网</a>
+                <a href="#" target="_blank">铁血军事小说</a>
+
+            </div>
+        </li>
+        <li> <a class="menu-hd" id="music">音乐</a>
+            <div class="menu-bd" name="play">
+
+                <a href="#" target="_blank">酷我音乐</a>
+                <a href="#" target="_blank">一听音乐网</a>
+                <a href="#" target="_blank">酷狗音乐</a>
+                <a href="#" target="_blank">QQ音乐</a>
+                <a href="#" target="_blank">百度MP3</a>
+                <a href="#" target="_blank">千千音乐</a>
+                <a href="#" target="_blank">音悦台高清MV</a>
+
+            </div>
+        </li>
+        <li> <a class="menu-hd" id="shop">购物</a>
+            <div class="menu-bd" name="play">
+
+                <a href="#" target="_blank">淘宝网</a>
+                <a href="#" target="_blank">卓越网</a>
+                <a href="#" target="_blank">当当网</a>
+                <a href="#" target="_blank">淘宝商城</a>
+                <a href="#" target="_blank">苏宁易购</a>
+                <a href="#" target="_blank">京东商城</a>
+                <a href="#" target="_blank">搜房网</a>
+                <a href="#" target="_blank">名鞋库鞋城</a>
+
+            </div>
+        </li>
+        <li> <a class="menu-hd" id="relax">休闲</a>
+            <div class="menu-bd" name="play">
+
+                <a href="#" target="_blank">QQ空间</a>
+                <a href="#" target="_blank">新浪微博</a>
+                <a href="#" target="_blank">天涯社区</a>
+                <a href="#" target="_blank">猫扑</a>
+                <a href="#" target="_blank">百度贴吧</a>
+                <a href="#" target="_blank">人人网</a>
+                <a href="#" target="_blank">搜狐圈子</a>
+                <a href="#" target="_blank">豆瓣网</a>
+
+            </div>
+        </li>
+        <li> <a class="menu-hd" id="bank">银行</a>
+            <div class="menu-bd" name="play">
+
+                <a href="#" target="_blank">招商银行</a>
+                <a href="#" target="_blank">工商银行</a>
+                <a href="#" target="_blank">建设银行</a>
+                <a href="#" target="_blank">中国银行</a>
+                <a href="#" target="_blank">农业银行</a>
+                <a href="#" target="_blank">广发银行</a>
+                <a href="#" target="_blank">中国银联</a>
+                <a href="#" target="_blank">支付宝</a>
+                <a href="#" target="_blank">财付通</a>
+
+            </div>
+        </li>
+    </ul>
+    <ul class="r_side">
+        <li> <a class="menu-hd" id="gem">体育</a>
+            <div class="menu-bd" name="play">
+
+                <a href="#" target="_blank">新浪体育</a>
+                <a href="#" target="_blank">搜狐体育</a>
+                <a href="#" target="_blank">网易体育</a>
+                <a href="#" target="_blank">鲨威体坛</a>
+                <a href="#" target="_blank">NBA中文网</a>
+                <a href="#" target="_blank">雅虎体育</a>
+                <a href="#" target="_blank">体遨网</a>
+
+            </div>
+        </li>
+        <li> <a class="menu-hd" id="army">军事</a>
+            <div class="menu-bd" name="play">
+
+                <a href="#" target="_blank">中华网军事</a>
+                <a href="#" target="_blank">比邻军情网</a>
+                <a href="#" target="_blank">西陆军事</a>
+                <a href="#" target="_blank">环球军事</a>
+                <a href="#" target="_blank">铁血军事</a>
+                <a href="#" target="_blank">新浪军事</a>
+                <a href="#" target="_blank">战略网</a>
+                <a href="#" target="_blank">中国国防部</a>
+
+            </div>
+        </li>
+        <li> <a class="menu-hd" id="news">新闻</a>
+            <div class="menu-bd" name="play">
+
+                <a href="#" target="_blank">新浪新闻</a>
+                <a href="#" target="_blank">人民网</a>
+                <a href="#" target="_blank">腾讯新闻</a>
+                <a href="#" target="_blank">网易新闻</a>
+                <a href="#" target="_blank">环球网</a>
+                <a href="#" target="_blank">中国日报</a>
+                <a href="#" target="_blank">天涯国际观察</a>
+                <a href="#" target="_blank">凤凰资讯</a>
+
+            </div>
+        </li>
+        <li> <a class="menu-hd" id="computer">电脑</a>
+            <div class="menu-bd" name="play">
+
+                <a href="#" target="_blank">IT168电脑</a>
+                <a href="#" target="_blank">天极数码</a>
+                <a href="#" target="_blank">泡泡网</a>
+                <a href="#" target="_blank">绿色下载吧</a>
+                <a href="#" target="_blank">中关村在线</a>
+                <a href="#" target="_blank">天空软件</a>
+
+            </div>
+        </li>
+        <li> <a class="menu-hd" id="phone">手机</a>
+            <div class="menu-bd" name="play">
+
+                <a href="#" target="_blank">移动营业厅</a>
+                <a href="#" target="_blank">联通营业厅</a>
+                <a href="#" target="_blank">电信营业厅</a>
+                <a href="#" target="_blank">手机之家</a>
+                <a href="#" target="_blank">太平洋手机</a>
+                <a href="#" target="_blank">iPhone中文网</a>
+                <a href="#" target="_blank">Android中文网</a>
+
+            </div>
+        </li>
+        <li> <a class="menu-hd" id="cloud">网盘</a>
+            <div class="menu-bd" name="play">
+
+                <a href="#" target="_blank">115网盘</a>
+                <a href="#" target="_blank">纳米盘</a>
+                <a href="#" target="_blank">RayFile网盘</a>
+                <a href="#" target="_blank">QQ网盘</a>
+                <a href="#" target="_blank">金山快盘</a>
+                <a href="#" target="_blank">盛大网盘</a>
+                <a href="#" target="_blank">华为网盘</a>
+                <a href="#" target="_blank">百度云盘</a>
+                <a href="#" target="_blank">新浪微盘</a>
+
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+</body>
+</html>

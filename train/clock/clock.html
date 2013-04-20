@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script src="http://a.tbcdn.cn/??s/kissy/1.2.0/kissy-min.js"></script>
+        <style>
+            .countdown{
+                position: relative;
+                height:76px;
+                float:left;
+                display:inline;
+                margin-left:5px;
+                width:53px;
+            }
+            .item{
+                float:left;
+                display:inline;
+                margin-right:20px;
+            }
+            .number{
+                width:53px;
+                height:38px;
+                position: absolute;
+                z-index:-1;
+                background:url(http://www.html-js.com/wp-content/uploads/2012/07/loading.gif) no-repeat center center;
+            }
+            .number-1{
+                z-index:2;
+            }
+            .number-2{
+                z-index:1;
+            }
+
+            .top{
+                bottom:38px;
+            }
+            .bottom{
+                top:38px;
+                height:0;
+            }
+
+        </style>
+    <script src='clock.js'></script></head>
+    <body>
+        <div style="margin:20px 0;font-size:30px;">����������ʱ</div>
+        <div class="item">
+            <div class="countdown" id="day-1">
+
+            </div>
+            <div class="countdown" id="day-2">
+
+            </div>
+        </div>
+        <div class="item">
+            <div class="countdown" id="hour-1">
+
+            </div>
+            <div class="countdown" id="hour-2">
+
+            </div>
+        </div>
+        <div class="item">
+            <div class="countdown" id="minute-1">
+
+            </div>
+            <div class="countdown" id="minute-2">
+
+            </div>
+        </div>
+        <div class="item">
+            <div class="countdown" id="sec-1">
+
+            </div>
+            <div class="countdown" id="sec-2">
+
+            </div>
+        </div>
+        <script>
+                      
+            KISSY.add("turneffect",function(S){
+                var DOM=S.DOM,Event=S.Event;
+                /**
+                 *
+                 *@param _config  ���������el��Ԫ��ѡ��������height�����ָ߶ȣ�
+                 */
+                var turneffect=function(_config){
+                    this.zIndex=2;
+                    this.els={
+                         
+                    }
+                    this.height=_config.height;
+                    this.container=DOM.get(_config.el)
+                    this.lastNum=0;
+                    S.mix(this,S.TargetEvent)
+                    this.init();
+                }
+                turneffect.prototype={
+                    init:function(){
+                        this._create()
+                    },
+                    /**
+                     * ������Ҫ�Ľṹ,ÿ��������Ҫ20��dom
+                     */
+                    _create:function(){
+                        var i=0;
+                        while(i<10){
+                            this.els[i]={}
+                            var topImg=DOM.create("<img>")
+                            topImg.src="number/"+i+"-top.png";
+                            topImg.className="top number"
+                            this.els[i].top=topImg;
+                            var bottomImg=DOM.create("<img>")
+                            bottomImg.src="number/"+i+"-bottom.png";
+                            bottomImg.className="bottom number"
+                            this.els[i].bottom=bottomImg;
+                            this.container.appendChild(topImg)
+                            this.container.appendChild(bottomImg)
+                            i++
+                        }
+                        DOM.css([this.els[0].top,this.els[0].bottom],"zIndex","1")
+                        DOM.css(this.els[0].top,"height",this.height/2)
+                        DOM.css(this.els[0].bottom,"height",this.height/2)
+                    },
+                    show:function(num){
+                        if(num==this.lastNum) return;
+                        var ln=this.lastNum;//��һ������
+                        var self=this;
+                        //�ϵ����ֺ������ֵ����²���
+                        var oldTop=this.els[ln].top
+                        var oldBottom=this.els[ln].bottom;
+                        var newTop=this.els[num].top;
+                        var newBottom=this.els[num].bottom;
+                        //���������Ƶ�����ǰ���ֵ����档
+                        DOM.css([newTop,newBottom],"zIndex",self.zIndex-2)
+                        //�ϵ������ϰ벿�ֿ�ʼ���±�խ����ʱ�򿴵��Ƿ�ת������档
+                        KISSY.Anim(oldTop,{
+                            height:0
+                        },0.2,"easeIn",function(){
+                            //�������ֵĲ㼶�䵽��ǰ�档
+                            DOM.css([newTop,newBottom],"zIndex",self.zIndex++)
+                            //�ָ��ϵ������ϰ벿�ֵĸ߶�
+                            DOM.css(oldTop,"height",self.height/2)
+                            //�����ֵ��°벿�֣���0��ʼ��ߡ���ʱ�򿴵����Ƿ�ת��ķ���
+                            KISSY.Anim(newBottom,{
+                                height:self.height/2
+                            },0.1,"easeOut",function(){
+                                //�ָ��ϵ������°벿�ֵ�0
+                                oldBottom.style.height="0"
+                            }).run();   
+                        }).run();    
+                        //��ס����
+                        this.lastNum=num;
+                    }
+                }
+                return turneffect;
+            })
+             
+            KISSY.use("turneffect",function(S,TF){
+            
+                var day1=new TF({
+                    el:"#day-1",
+                    height:76
+                })
+                var day2=new TF({
+                    el:"#day-2",
+                    height:76
+                })
+                var hour1=new TF({
+                    el:"#hour-1",
+                    height:76
+                })
+                var hour2=new TF({
+                    el:"#hour-2",
+                    height:76
+                })
+                var minute1=new TF({
+                    el:"#minute-1",
+                    height:76
+                })
+                var minute2=new TF({
+                    el:"#minute-2",
+                    height:76
+                })
+                var sec1=new TF({
+                    el:"#sec-1",
+                    height:76
+                })
+                var sec2=new TF({
+                    el:"#sec-2",
+                    height:76
+                })
+                
+                var countdown= new Date().getTime()+100000000 //2012.7.20
+                var int_day,int_hour,int_minute,int_second;
+                var render=function(){
+                    var now=new Date().getTime();
+                    var time=countdown-now;
+                    if(time<=0){
+                        clearInterval(timer)
+                    }
+                    int_day=Math.floor(time/86400000)
+                    time-=int_day*86400000;
+                    int_hour=Math.floor(time/3600000)
+                    time-=int_hour*3600000;
+                    int_minute=Math.floor(time/60000)
+                    time-=int_minute*60000;
+                    int_second=Math.floor(time/1000)
+                    
+                    
+                    day1.show(Math.floor(int_day/10))
+                    day2.show(int_day%10)
+                    hour1.show(Math.floor(int_hour/10))
+                    hour2.show(int_hour%10)
+                    minute1.show(Math.floor(int_minute/10))
+                    minute2.show(int_minute%10)
+                    sec1.show(Math.floor(int_second/10))
+                    sec2.show(int_second%10)
+                }
+                render();
+                var timer=setInterval(render,1000)
+                
+            })
+        </script>
+    </body>
+</html>
