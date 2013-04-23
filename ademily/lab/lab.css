@@ -1,0 +1,41 @@
+/*clear style*/
+body,ul,li,p,input,h1,h2,h3,h4{margin:0;padding:0;}
+ul,li{list-style: none;}
+a{text-decoration:none; color:black;display: block;text-align: center;}
+a:focus {outline:none}                                                  /*after click,there'll be no dashed border */
+body{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+.wrap{width:960px;margin: 0 auto;}
+img{border-color: transparent;}
+
+/*header*/
+header{margin: 0 auto;}
+.decorate-bar{height:10px;background:yellow; }
+.under-decorate-bar{height:3px;background: #ffce7b;}
+h2>span{color:#ffe600;}
+h2{display: inline;}
+.nav-bar{height:60px;line-height:60px}
+.nav-bar ul{float: right;margin-top:-12px;overflow: hidden;}
+.nav-bar li{float:left;display: block;width:100px;font-size:14px;height:63px;border-width:12px 0 5px 0 ;border-style:solid;border-color: transparent;   }
+.nav-bar li.current{border-top-color:black;border-bottom-color:#d3d7d4;}
+/*content*/
+#slide{height:550px;width:960px;margin:0 auto;overflow: hidden;position: relative;}
+#slide .list{position:relative ;height:500px;}
+#slide .list li{position:absolute;top: 0;left:0;opacity: 0;filter:alpha(opacity=0);}
+#slide .list li.p_current{opacity:1;filter:alpha(opacity=1);}
+#slide .count{position:absolute;right:0;bottom:20px;}
+#slide .count li{float:left;cursor: pointer;background: black;color:white;height:20px;line-height:20px;width:20px;margin-left:5px;text-align: center;}
+#slide .count li.p_current{background:white;color:black;}
+/*a.pre{height:500px;width:50px;background:black;color:white;z-index: 9999;} */
+
+/*footer*/
+.b-footer {background:#130c0e;}
+.b-footer .wrap{position: relative;height:200px;}
+.b-footer p{font-size: 30px;color:white;padding:30px 0 0 30px;}
+.friend-link{position: absolute;bottom:0;left:30px}
+.weibo {width:300px;border-bottom: 1px solid #999d9c;padding-bottom:10px;}
+.link{margin:10px 0 10px 0;}
+.b-footer h4{display: inline;color:#999d9c;font-size: 13px;}
+.b-footer a{display: inline;color:#999d9c;font-size: 13px;padding-left:10px;}
+.b-footer a:hover{text-decoration: underline;}
+footer{background:black;}
+footer p{color:white;font-size:14px;height:40px;line-height:40px;text-align: center;}

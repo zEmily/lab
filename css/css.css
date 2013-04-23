@@ -1,11 +1,12 @@
-body{margin:0;padding:0;font-size: 14px;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;height:20px;line-height:30px;color: #333333;}
+body{margin:0;padding:0;font-size: 14px;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;line-height:30px;color: #333333; }
+.content:after{content:".";display:block;height:0;visibility: hidden;clear:both;}
 p{margin:0;padding:0;}
 ul,li{list-style-type: none;margin:0;padding:0;}
 
 .float ul,.float li{float:left; text-align: center;}
 li a{display: block;width:106px;text-align: center;text-decoration: none;color:  #005580;font-size:12px;}
 li a:hover{color:#0088cc}
-a:focus {outline:none}   /*ÈÃÁ´½ÓßÂµã»÷Ö®ºóÃ»ÓÐÐéÏß¿ò£¬ÇÒ²»»áÇÐ»»½¹µã¡£*/
+a:focus {outline:none}   /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½Ö®ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ß¿ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ã¡£*/
 
 /*nav*/
 .nav{width:960px;margin: 0 auto;}
@@ -22,7 +23,7 @@ a:focus {outline:none}   /*ÈÃÁ´½ÓßÂµã»÷Ö®ºóÃ»ÓÐÐéÏß¿ò£¬ÇÒ²»»áÇÐ»»½¹µã¡£*/
 
 /*content*/
 /*body{background-image: url("/logo/back1.jpg") ;background-attachment: fixed;background-repeat: no-repeat;background-position: center;}     */
-.content{width:960px;margin: 0 auto;background-color: white;overflow: hidden;}
+.content{width:960px;margin: 0 auto;background-color: white;}
 .container{margin-bottom: 10px;float:left;width:960px;}
 .title{background: #1e90ff ;color:white ;line-height: 14px;}
 .clear{clear: both;}
